@@ -1,0 +1,8 @@
+prefix=@prefix@
+datadir=@datadir@/coin/Data/miplib3
+
+Name: Miplib3
+Description: MIPLIB3 models
+Version: @PACKAGE_VERSION@
+Libs:
+Cflags:

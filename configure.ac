@@ -12,7 +12,7 @@
 
 AC_PREREQ(2.59)
 
-AC_INIT([DataNetlib],[trunk],[https://projects.coin-or.org/BuildTools/])
+AC_INIT([DataMiplib3],[trunk],[https://projects.coin-or.org/BuildTools/])
 
 AC_COPYRIGHT([
 Copyright 2006 International Business Machines and others.
@@ -30,7 +30,7 @@ AC_CONFIG_SRCDIR(configure.ac)
 # /usr/local.
 AC_PREFIX_DEFAULT([`pwd`])
 
-AC_COIN_PROJECTDIR_INIT(DataNetlib)
+AC_COIN_PROJECTDIR_INIT(DataMiplib3)
 
 #############################################################################
 #     We only need automake to generate Makefiles for the distribution      #
@@ -43,7 +43,7 @@ AC_COIN_INIT_AUTOMAKE
 #Find out what the data files are and create links if this is a VPATH config#
 #############################################################################
 
-AC_COIN_EXAMPLE_FILES([*.mps.gz])
+AC_COIN_EXAMPLE_FILES([*.gz miplib3.cat])
 
 ##############################################################################
 #                   Finishing up by writing all the output                   #
@@ -54,7 +54,7 @@ AC_SUBST(ABSBUILDDIR)
 
 # Here list all the files that configure should create (except for the
 # configuration header file)
-AC_CONFIG_FILES([Makefile coindatanetlib.pc coindatanetlib-uninstalled.pc])
+AC_CONFIG_FILES([Makefile coindatamiplib3.pc coindatamiplib3-uninstalled.pc])
 
 # Finally, we let configure write all the output...
 AC_COIN_FINALIZE

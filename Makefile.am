@@ -14,7 +14,7 @@ AUTOMAKE_OPTIONS = foreign
 
 EXTRA_DIST = $(EXAMPLE_FILES) README AUTHORS LICENSE
 
-datacoindir = $(datadir)/coin/Data/Netlib
+datacoindir = $(datadir)/coin/Data/miplib3
 
 ########################################################################
 #           Extra targets for uncompressing the .gz files              #
@@ -40,11 +40,11 @@ $(EXAMPLE_UNCOMPRESSED_FILES):
 skipunzip:
 	echo "Skipping decompression (package compiled with --enable-gnu-packages)"
 
-coindocdir = $(datadir)/coin/doc/Data/Netlib
+coindocdir = $(datadir)/coin/doc/Data/miplib3
 coindoc_DATA = README AUTHORS LICENSE
 
 pkgconfiglibdir = $(libdir)/pkgconfig
-pkgconfiglib_DATA = coindatanetlib.pc
+pkgconfiglib_DATA = coindatamiplib3.pc
 
 .PHONY: uncompress unzip skipunzip
 

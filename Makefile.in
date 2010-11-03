@@ -54,9 +54,10 @@ build_triplet = @build@
 DIST_COMMON = README $(am__configure_deps) \
 	$(srcdir)/BuildTools/Makemain.inc $(srcdir)/Makefile.am \
 	$(srcdir)/Makefile.in \
-	$(srcdir)/coindatanetlib-uninstalled.pc.in \
-	$(srcdir)/coindatanetlib.pc.in $(top_srcdir)/configure AUTHORS \
-	config.guess config.sub depcomp install-sh ltmain.sh missing
+	$(srcdir)/coindatamiplib3-uninstalled.pc.in \
+	$(srcdir)/coindatamiplib3.pc.in $(top_srcdir)/configure \
+	AUTHORS config.guess config.sub depcomp install-sh ltmain.sh \
+	missing
 @HAVE_EXTERNALS_TRUE@am__append_1 = Externals
 @HAVE_EXTERNALS_TRUE@am__append_2 = .Externals-stamp
 subdir = .
@@ -68,7 +69,7 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno configure.status.lineno
 mkinstalldirs = $(install_sh) -d
-CONFIG_CLEAN_FILES = coindatanetlib.pc coindatanetlib-uninstalled.pc
+CONFIG_CLEAN_FILES = coindatamiplib3.pc coindatamiplib3-uninstalled.pc
 SOURCES =
 DIST_SOURCES =
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
@@ -116,7 +117,7 @@ COIN_HAS_ZLIB_TRUE = @COIN_HAS_ZLIB_TRUE@
 CPP = @CPP@
 CPPFLAGS = @CPPFLAGS@
 CYGPATH_W = @CYGPATH_W@
-DATANETLIB_SVN_REV = @DATANETLIB_SVN_REV@
+DATAMIPLIB3_SVN_REV = @DATAMIPLIB3_SVN_REV@
 DEFS = @DEFS@
 DEPDIR = @DEPDIR@
 ECHO_C = @ECHO_C@
@@ -206,13 +207,13 @@ AUTOMAKE_OPTIONS = foreign
 #                List files that should be distributed                 #
 ########################################################################
 EXTRA_DIST = $(EXAMPLE_FILES) README AUTHORS LICENSE $(am__append_1)
-datacoindir = $(datadir)/coin/Data/Netlib
+datacoindir = $(datadir)/coin/Data/miplib3
 @COIN_HAS_ZLIB_FALSE@datacoin_DATA = $(EXAMPLE_UNCOMPRESSED_FILES)
 @COIN_HAS_ZLIB_TRUE@datacoin_DATA = $(EXAMPLE_FILES)
-coindocdir = $(datadir)/coin/doc/Data/Netlib
+coindocdir = $(datadir)/coin/doc/Data/miplib3
 coindoc_DATA = README AUTHORS LICENSE
 pkgconfiglibdir = $(libdir)/pkgconfig
-pkgconfiglib_DATA = coindatanetlib.pc
+pkgconfiglib_DATA = coindatamiplib3.pc
 
 ########################################################################
 #                  List files that should be cleaned                   #
@@ -258,9 +259,9 @@ $(top_srcdir)/configure: @MAINTAINER_MODE_TRUE@ $(am__configure_deps)
 	cd $(srcdir) && $(AUTOCONF)
 $(ACLOCAL_M4): @MAINTAINER_MODE_TRUE@ $(am__aclocal_m4_deps)
 	cd $(srcdir) && $(ACLOCAL) $(ACLOCAL_AMFLAGS)
-coindatanetlib.pc: $(top_builddir)/config.status $(srcdir)/coindatanetlib.pc.in
+coindatamiplib3.pc: $(top_builddir)/config.status $(srcdir)/coindatamiplib3.pc.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
-coindatanetlib-uninstalled.pc: $(top_builddir)/config.status $(srcdir)/coindatanetlib-uninstalled.pc.in
+coindatamiplib3-uninstalled.pc: $(top_builddir)/config.status $(srcdir)/coindatamiplib3-uninstalled.pc.in
 	cd $(top_builddir) && $(SHELL) ./config.status $@
 uninstall-info-am:
 install-coindocDATA: $(coindoc_DATA)
