@@ -12,7 +12,7 @@
 
 AC_PREREQ(2.59)
 
-AC_INIT([DataMiplib3],[trunk],[https://projects.coin-or.org/BuildTools/])
+AC_INIT([DataMiplib3],[1.1stable],[https://projects.coin-or.org/BuildTools/])
 
 AC_COPYRIGHT([
 Copyright 2006 International Business Machines and others.
